@@ -1,8 +1,47 @@
 title: CloudSchool Documentation
 description: Training modules, labs, troubleshooting guides, and AI content.
-theme: minima
+baseurl: "/docs"
+url: "https://cloudschool.github.io"
+
 markdown: kramdown
+theme: null
+
+collections:
+  learning_paths:
+    output: true
+    permalink: /learning-paths/:path/
+  labs:
+    output: true
+    permalink: /labs/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: "learning_paths"
+    values:
+      layout: module
+  - scope:
+      path: ""
+      type: "labs"
+    values:
+      layout: lab
+
 plugins:
-  - jekyll-toc
   - jekyll-seo-tag
   - jekyll-sitemap
+
+navigation:
+  - title: "Cloud & Infrastructure"
+    path: "/learning-paths/cloud-infrastructure/"
+  - title: "Cybersecurity"
+    path: "/learning-paths/cybersecurity/"
+  - title: "AI & ML"
+    path: "/learning-paths/ai-ml/"
+  - title: "DevOps & SRE"
+    path: "/learning-paths/devops-sre/"
+  - title: "Labs"
+    path: "/labs/"
+  - title: "Troubleshooting"
+    path: "/troubleshooting/"
+  - title: "Career"
+    path: "/career/"

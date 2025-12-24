@@ -1,0 +1,8 @@
+title: CloudSchool Documentation
+description: Training modules, labs, troubleshooting guides, and AI content.
+theme: minima
+markdown: kramdown
+plugins:
+  - jekyll-toc
+  - jekyll-seo-tag
+  - jekyll-sitemap
